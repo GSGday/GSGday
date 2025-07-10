@@ -1,0 +1,169 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>GSGday - Portal Jawaban dari Rasa Penasaran Anda</title>
+  <meta name="description" content="Temukan jawaban dari rasa penasaran Anda dengan artikel unik seputar game, teknologi, dan fenomena menarik di luar mainstream di GSGday">
+  <meta name="keywords" content="artikel unik, teknologi terbaru, game update, fenomena menarik, rasa penasaran, konten alternatif">
+  <meta name="author" content="GSGday">
+  <meta name="robots" content="index, follow">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.gsgday.com/">
+  <meta property="og:title" content="GSGday - Jawaban Untuk Rasa Penasaran Anda">
+  <meta property="og:description" content="Portal artikel unik seputar game, teknologi, dan fenomena menarik di luar mainstream">
+  <meta property="og:image" content="https://i.ibb.co/ymvDv20v/file-00000000c8ac61fba1a93b93d1ea3e98.png">
+  
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.gsgday.com/">
+  <meta property="twitter:title" content="GSGday - Jawaban Untuk Rasa Penasaran Anda">
+  <meta property="twitter:description" content="Temukan artikel menarik seputar game, teknologi, dan hal unik di luar mainstream">
+  <meta property="twitter:image" content="https://i.ibb.co/ymvDv20v/file-00000000c8ac61fba1a93b93d1ea3e98.png">
+  
+  <link rel="canonical" href="https://www.gsgday.com/">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/ymvDv20v/file-00000000c8ac61fba1a93b93d1ea3e98.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/ymvDv20v/file-00000000c8ac61fba1a93b93d1ea3e98.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <meta name="theme-color" content="#1a73e8">
+  <meta name="msapplication-TileColor" content="#1a73e8">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-globe-asia"></i>
+        <span>GSGday</span>
+      </a>
+      
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Beranda</a></li>
+        <li><a href="game.html">Game</a></li>
+        <li><a href="teknologi.html">Teknologi</a></li>
+        <li><a href="unik.html">Unik</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+      </ul>
+      
+      <div class="header-actions">
+        <form class="search-form">
+          <input type="text" placeholder="Cari artikel...">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Portal Jawaban dari Rasa Penasaran Anda</h1>
+      <p>Kumpulan artikel, opini, dan kabar menarik di luar jalur mainstream</p>
+      <div class="hero-btns">
+        <a href="artikel.html" class="btn">Jelajahi Artikel</a>
+        <a href="tentang.html" class="btn btn-outline">Pelajari Lebih Lanjut</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlight-section">
+    <div class="container">
+      <h2 class="section-title">Sorotan Utama</h2>
+      <div class="highlight-container" id="highlightContainer">
+      </div>
+    </div>
+  </section>
+
+  <section class="articles-section">
+    <div class="container">
+      <h2 class="section-title">Artikel Terbaru</h2>
+      
+      <div class="articles-filter">
+        <button class="filter-btn active" data-category="all">Semua</button>
+        <button class="filter-btn" data-category="game">Game</button>
+        <button class="filter-btn" data-category="tech">Teknologi</button>
+        <button class="filter-btn" data-category="unique">Unik</button>
+      </div>
+      
+      <div class="articles-grid" id="articlesGrid">
+      </div>
+      
+      <div class="load-more">
+        <button class="btn" id="loadMoreBtn">Muat Lebih Banyak</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter-section">
+    <div class="newsletter-container">
+      <h2>Berlangganan Newsletter</h2>
+      <p>Dapatkan update artikel terbaru langsung ke email Anda</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Masukkan email Anda" required>
+        <button type="submit">Berlangganan</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-col footer-about">
+          <h3>Tentang GSGday</h3>
+          <p>Portal berita dan artikel yang menjawab rasa penasaran Anda dengan konten berkualitas dari berbagai bidang seperti game, teknologi, dan hal unik lainnya.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Kategori</h3>
+          <ul class="footer-links">
+            <li><a href="game.html">Game</a></li>
+            <li><a href="teknologi.html">Teknologi</a></li>
+            <li><a href="gadget.html">Gadget</a></li>
+            <li><a href="ai.html">AI & Robotik</a></li>
+            <li><a href="unik.html">Fenomena Unik</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Link Cepat</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="populer.html">Artikel Populer</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+            <li><a href="privacy.html">Kebijakan Privasi</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Kontak Kami</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-envelope"></i> daygsg3@gmail.com</li>
+            <li><i class="fas fa-phone"></i> +62 514 2294 258</li>
+            <li><i class="fas fa-map-marker-alt"></i> Makassar, Indonesia</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        &copy; 2025 GSGday. Semua hak dilindungi. Semua rasa penasaran dilayani.
+      </div>
+    </div>
+  </footer>
+  <script src="Script.js"></script>
+</body>
+</html>
