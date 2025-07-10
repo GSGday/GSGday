@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman Tidak Ditemukan - GSGday</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #0077cc;
+      --secondary-color: #00c6ff;
+      --accent-color: #ff6b6b;
+      --light-color: #f4f7fa;
+      --dark-color: #222;
+      --text-color: #333;
+      --text-light: #555;
+      --white: #fff;
+      --border-color: #ddd;
+      --shadow: 0 4px 10px rgba(0,0,0,0.1);
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: var(--light-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    header {
+      background-color: var(--white);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo i {
+      font-size: 2rem;
+    }
+
+    .not-found-content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 0;
+    }
+
+    .not-found-container {
+      text-align: center;
+      max-width: 700px;
+      padding: 2rem;
+      background: var(--white);
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .not-found-container:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2Y0ZjdmYSIvPjxyZWN0IHg9IjIwIiB5PSIwIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIGZpbGw9IiNmNGY3ZmEiLz48cmVjdCB4PSIwIiB5PSIyMCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjZjRmN2ZhIi8+PHBhdGggZD0iTTIwIDIwTDAgMjBMMCAwTDIwIDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2RkZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm4pIiBvcGFjaXR5PSIwLjEiLz48L3N2Zz4=') repeat;
+      opacity: 0.2;
+      z-index: -1;
+    }
+
+    .not-found-illustration {
+      margin: 0 auto 2rem;
+      position: relative;
+      max-width: 300px;
+    }
+
+    .not-found-illustration .number {
+      font-size: 10rem;
+      font-weight: 800;
+      color: var(--primary-color);
+      opacity: 0.2;
+      line-height: 1;
+    }
+
+    .not-found-illustration .ghost {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 8rem;
+      color: var(--accent-color);
+      opacity: 0.8;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translate(-50%, -50%) translateY(0); }
+      50% { transform: translate(-50%, -50%) translateY(-15px); }
+      100% { transform: translate(-50%, -50%) translateY(0); }
+    }
+
+    .not-found-container h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--dark-color);
+    }
+
+    .not-found-container p {
+      font-size: 1.2rem;
+      color: var(--text-light);
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: var(--primary-color);
+      color: var(--white);
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+      font-size: 1.1rem;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .btn:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background: rgba(0,0,0,0.1);
+      transition: var(--transition);
+      z-index: -1;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 119, 204, 0.3);
+    }
+
+    .btn:hover:before {
+      width: 100%;
+    }
+
+    .suggestions {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .suggestions h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-color);
+    }
+
+    .suggestion-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .suggestion-links a {
+      padding: 8px 20px;
+      background: var(--light-color);
+      border-radius: 30px;
+      transition: var(--transition);
+    }
+
+    .suggestion-links a:hover {
+      background: var(--primary-color);
+      color: var(--white);
+    }
+
+    footer {
+      background: var(--dark-color);
+      color: var(--white);
+      padding: 3rem 0 1.5rem;
+      margin-top: auto;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-col h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--primary-color);
+      display: inline-block;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-links a {
+      opacity: 0.8;
+      transition: var(--transition);
+      display: block;
+    }
+
+    .footer-links a:hover {
+      opacity: 1;
+      color: var(--secondary-color);
+      transform: translateX(5px);
+    }
+
+    .footer-about p {
+      opacity: 0.8;
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      transition: var(--transition);
+    }
+
+    .social-links a:hover {
+      background: var(--primary-color);
+      transform: translateY(-5px);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      opacity: 0.7;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .not-found-container h1 {
+        font-size: 2rem;
+      }
+      
+      .not-found-container p {
+        font-size: 1rem;
+      }
+      
+      .not-found-illustration .number {
+        font-size: 8rem;
+      }
+      
+      .not-found-illustration .ghost {
+        font-size: 6rem;
+      }
+      
+      .suggestion-links {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-globe-asia"></i>
+        <span>GSGday</span>
+      </a>
+    </div>
+  </header>
+
+  <section class="not-found-content">
+    <div class="container">
+      <div class="not-found-container">
+        <div class="not-found-illustration">
+          <div class="number">404</div>
+          <div class="ghost">
+            <i class="fas fa-ghost"></i>
+          </div>
+        </div>
+        <h1>Halaman Tidak Ditemukan</h1>
+        <p>Sepertinya halaman yang Anda cari telah menghilang atau pindah ke dimensi lain. Mari kita bantu Anda kembali ke jalur yang benar!</p>
+        
+        <a href="index.html" class="btn">
+          <i class="fas fa-home"></i> Kembali ke Beranda
+        </a>
+        
+        <div class="suggestions">
+          <h3>Mungkin Anda mencari:</h3>
+          <div class="suggestion-links">
+            <a href="game.html">Artikel Game</a>
+            <a href="teknologi.html">Teknologi Terbaru</a>
+            <a href="unik.html">Fenomena Unik</a>
+            <a href="populer.html">Artikel Populer</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-col footer-about">
+          <h3>Tentang GSGday</h3>
+          <p>Portal berita dan artikel yang menjawab rasa penasaran Anda dengan konten berkualitas dari berbagai bidang seperti game, teknologi, dan hal unik lainnya.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Kategori</h3>
+          <ul class="footer-links">
+            <li><a href="game.html">Game</a></li>
+            <li><a href="teknologi.html">Teknologi</a></li>
+            <li><a href="gadget.html">Gadget</a></li>
+            <li><a href="ai.html">AI & Robotik</a></li>
+            <li><a href="unik.html">Fenomena Unik</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Link Cepat</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="populer.html">Artikel Populer</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+            <li><a href="privacy.html">Kebijakan Privasi</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Kontak Kami</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-envelope"></i> gsgday1@gmail.com</li>
+            <li><i class="fas fa-phone"></i> +62 8514 2294 258</li>
+            <li><i class="fas fa-map-marker-alt"></i> Makassar, Indonesia</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        &copy; 2025 GSGday. Semua hak dilindungi. Semua rasa penasaran dilayani.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
