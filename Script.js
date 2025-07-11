@@ -1,5 +1,15 @@
 const articlesData = [
       {
+        id: 2,
+        title: "Kontroversi Upin & Ipin Universe",
+        category: "game",
+        image: "https://i.ibb.co/hFP0cRKf/maxresdefault.jpg",
+        description: "Gaji karyawan tak dibayar & harga game yang mengundang protes.",
+        date: "11 Juli 2025",
+        views: "8.2K",
+        link: "Kontroversi-Upin-&-Ipin-Universe.html"
+      },
+      {
         id: 1,
         title: "Ketika YouTube & TikTok Menjadi Sumber Berita Utama",
         category: "unique",
