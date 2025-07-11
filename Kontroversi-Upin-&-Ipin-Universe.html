@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Kontroversi game Upin & Ipin Universe: Gaji karyawan tak dibayar & harga game yang memicu protes">
+  <meta name="description" class="lang" 
+  data-lang-id="Kontroversi game Upin & Ipin Universe: Gaji karyawan tak dibayar & harga game yang memicu protes" 
+  data-lang-en="Upin & Ipin Universe Controversy: Unpaid employee salaries & game price sparks protests"
+  content="Kontroversi game Upin & Ipin Universe: Gaji karyawan tak dibayar & harga game yang memicu protes">
   <meta name="keywords" content="upin ipin, game malaysia, kontroversi game, boikot game, streamline studios">
   <meta name="author" content="Redaksi GSGday">
   <meta name="robots" content="index, follow">
@@ -20,9 +23,14 @@
   <meta name="twitter:description" content="Gaji karyawan tak dibayar & harga game yang mengundang protes">
   <meta name="twitter:image" content="https://i.ibb.co/hFP0cRKf/maxresdefault.jpg">
   
-  <title>Kontroversi Upin & Ipin Universe - GSGday</title>
+  <title id="pageTitle" data-lang-id="Kontroversi Upin & Ipin Universe - GSGday" data-lang-en="Upin & Ipin Universe Controversy - GSGday">Kontroversi Upin & Ipin Universe - GSGday</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/ymvDv20v/file-00000000c8ac61fba1a93b93d1ea3e98.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/ymvDv20v/file-00000000c8ac61fba1a93b93d1ea3e98.png">
+  <link rel="manifest" href="/site.webmanifest">
   
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8TDCEG8Q5Q"></script>
@@ -658,21 +666,21 @@
     </div>
   </header>
 
-  <div class="breadcrumb">
-    <div class="container breadcrumb-container">
-      <a href="index.html">Beranda</a>
-      <i class="fas fa-chevron-right"></i>
-      <a href="game.html">Game</a>
-      <i class="fas fa-chevron-right"></i>
-      <span class="lang active" data-lang-id="Kontroversi Upin & Ipin Universe" data-lang-en="Upin & Ipin Universe Controversy">Kontroversi Upin & Ipin Universe</span>
-    </div>
+<div class="breadcrumb">
+  <div class="container breadcrumb-container">
+    <a href="index.html" class="lang" data-lang-id="Beranda" data-lang-en="Home">Beranda</a>
+    <i class="fas fa-chevron-right"></i>
+    <a href="game.html" class="lang" data-lang-id="Game" data-lang-en="Games">Game</a>
+    <i class="fas fa-chevron-right"></i>
+    <span class="lang" data-lang-id="Kontroversi Upin & Ipin Universe" data-lang-en="Upin & Ipin Universe Controversy">Kontroversi Upin & Ipin Universe</span>
   </div>
+</div>
 
   <div class="article-header">
     <div class="container">
       <h1 class="article-title lang active" data-lang-id="Kontroversi Upin & Ipin Universe: Gaji Karyawan Tak Dibayar & Harga Game yang Mengundang Protes" data-lang-en="Upin & Ipin Universe Controversy: Unpaid Salaries & Game Price Spark Protests">Kontroversi Upin & Ipin Universe: Gaji Karyawan Tak Dibayar & Harga Game yang Mengundang Protes</h1>
       <div class="article-meta">
-        <span><i class="far fa-user"></i> <span class="lang active" data-lang-id="Redaksi GSGday" data-lang-en="GSGday Editorial"> Azhar Muhazzab</span></span>
+        <span><i class="far fa-user"></i> <span class="lang active" data-lang-id="Azhar Muhazzab" data-lang-en="Azhar Muhazzab"> Azhar Muhazzab</span></span>
         <span><i class="far fa-calendar"></i> 11 Juli 2025</span>
         <span><i class="far fa-clock"></i> <span class="lang active" data-lang-id="5 menit baca" data-lang-en="5 min read">5 menit baca</span></span>
       </div>
@@ -1021,59 +1029,106 @@
   </footer>
 
   <script>
-    document.getElementById('mobileMenuBtn').addEventListener('click', function() {
-      document.getElementById('navLinks').classList.toggle('show');
-    });
+  function updateLanguage(lang) {
+    const pageTitle = document.getElementById('pageTitle');
+    if (pageTitle) {
+      pageTitle.textContent = lang === 'id' 
+        ? pageTitle.getAttribute('data-lang-id')
+        : pageTitle.getAttribute('data-lang-en');
+    }
     
-    document.getElementById('languageBtn').addEventListener('click', function(e) {
-      e.stopPropagation();
-      document.getElementById('languageOptions').classList.toggle('show');
-    });
-    
-    document.addEventListener('click', function(e) {
-      const languageOptions = document.getElementById('languageOptions');
-      if (languageOptions.classList.contains('show') && 
-          !e.target.closest('.language-switcher')) {
-        languageOptions.classList.remove('show');
+    document.querySelectorAll('.lang').forEach(el => {
+      if (el.tagName === 'META') {
+        if (el.name === 'description') {
+          el.content = lang === 'id' 
+            ? "Kontroversi game Upin & Ipin Universe: Gaji karyawan tak dibayar & harga game yang memicu protes"
+            : "Upin & Ipin Universe Controversy: Unpaid employee salaries & game price sparks protests";
+        }
+      } else {
+        el.textContent = lang === 'id' 
+          ? el.getAttribute('data-lang-id')
+          : el.getAttribute('data-lang-en');
       }
     });
     
-    document.querySelectorAll('.language-option').forEach(option => {
-      option.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const selectedLang = this.getAttribute('data-lang');
-        const languageBtn = document.getElementById('languageBtn');
-        
-        document.querySelectorAll('.language-option').forEach(opt => {
-          opt.classList.remove('active');
-        });
-        
-        this.classList.add('active');
-        
-        if (selectedLang === 'id') {
-          languageBtn.innerHTML = '<i class="fas fa-globe"></i> ID <i class="fas fa-chevron-down"></i>';
-          document.querySelectorAll('.lang-content').forEach(content => {
-            content.classList.remove('active');
-          });
-          document.querySelector('.lang-content[data-lang="id"]').classList.add('active');
-          document.querySelectorAll('.lang').forEach(el => {
-            el.textContent = el.getAttribute('data-lang-id');
-          });
-        } else if (selectedLang === 'en') {
-          languageBtn.innerHTML = '<i class="fas fa-globe"></i> EN <i class="fas fa-chevron-down"></i>';
-          document.querySelectorAll('.lang-content').forEach(content => {
-            content.classList.remove('active');
-          });
-          document.querySelector('.lang-content[data-lang="en"]').classList.add('active');
-          document.querySelectorAll('.lang').forEach(el => {
-            el.textContent = el.getAttribute('data-lang-en');
-          });
-        }
-        
-        document.getElementById('languageOptions').classList.remove('show');
-      });
+    document.querySelectorAll('.lang-content').forEach(content => {
+      content.classList.remove('active');
     });
-  </script>
+    const activeContent = document.querySelector(`.lang-content[data-lang="${lang}"]`);
+    if (activeContent) activeContent.classList.add('active');
+    
+    const languageBtn = document.getElementById('languageBtn');
+    if (languageBtn) {
+      languageBtn.innerHTML = lang === 'id' 
+        ? '<i class="fas fa-globe"></i> ID <i class="fas fa-chevron-down"></i>'
+        : '<i class="fas fa-globe"></i> EN <i class="fas fa-chevron-down"></i>';
+    }
+    
+    localStorage.setItem('preferredLanguage', lang);
+    document.documentElement.lang = lang;
+  }
+
+  function detectUserLanguage() {
+    const savedLang = localStorage.getItem('preferredLanguage');
+    if (savedLang) return savedLang;
+    
+    const browserLang = navigator.language || navigator.userLanguage;
+    if (browserLang.startsWith('en')) return 'en';
+    
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    if (timezone.includes('London') || 
+        timezone.includes('New_York') || 
+        timezone.includes('Los_Angeles') || 
+        timezone.includes('Australia')) {
+      return 'en';
+    }
+    
+    return 'id';
+  }
+
+  document.getElementById('mobileMenuBtn')?.addEventListener('click', function() {
+    document.getElementById('navLinks').classList.toggle('show');
+  });
+  
+  document.getElementById('languageBtn')?.addEventListener('click', function(e) {
+    e.stopPropagation();
+    document.getElementById('languageOptions').classList.toggle('show');
+  });
+  
+  document.addEventListener('click', function(e) {
+    const languageOptions = document.getElementById('languageOptions');
+    if (languageOptions?.classList.contains('show') && 
+        !e.target.closest('.language-switcher')) {
+      languageOptions.classList.remove('show');
+    }
+  });
+  
+  document.querySelectorAll('.language-option').forEach(option => {
+    option.addEventListener('click', function(e) {
+      e.preventDefault();
+      const selectedLang = this.getAttribute('data-lang');
+      
+      document.querySelectorAll('.language-option').forEach(opt => {
+        opt.classList.remove('active');
+      });
+      this.classList.add('active');
+      
+      updateLanguage(selectedLang);
+      
+      document.getElementById('languageOptions').classList.remove('show');
+    });
+  });
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const userLang = detectUserLanguage();
+    updateLanguage(userLang);
+  
+    document.querySelectorAll('.language-option').forEach(option => {
+      if (option.getAttribute('data-lang') === userLang) {
+        option.classList.add('active');
+      }
+    });
+  });
+</script>
 </body>
 </html>
