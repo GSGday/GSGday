@@ -1,5 +1,15 @@
 const articlesData = [
       {
+        id: 3,
+        title: "Kenapa Game Android Vertikal Sudah Ditinggalkan?",
+        category: "game",
+        image: "https://i.postimg.cc/PJXyZw3n/images-3.jpg",
+        description: "Analisis pergeseran tren game mobile dari orientasi vertikal ke horizontal dan dampaknya.",
+        date: "11 Juli 2025",
+        views: "4K",
+        link: "game-android-vertikal.html"
+      },
+      {
         id: 2,
         title: "Kontroversi Upin & Ipin Universe",
         category: "game",
