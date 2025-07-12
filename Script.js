@@ -1,5 +1,15 @@
 const articlesData = [
       {
+        id: 4,
+        title: "Situs Download Game Nintendo Switch Bajakan Telah Disita oleh FBI?",
+        category: "game",
+        image: "https://i.postimg.cc/TPPc25ky/Situs-Download-Game-Nintendo-Switch-Bajakan-Telah-Disita-oleh-FBI-2-768x432.webp",
+        description: "FBI menyita situs download game Nintendo Switch bajakan NSW2U. Baca berita lengkap tentang operasi anti-pembajakan terbaru dari Nintendo.",
+        date: "12 Juli 2025",
+        views: "1.2K",
+        link: "situs-download-nintendo-switch-bajakan-disita-fbi.html"
+      },
+      {
         id: 3,
         title: "Kenapa Game Android Vertikal Sudah Ditinggalkan?",
         category: "game",
@@ -33,6 +43,14 @@ const articlesData = [
     ];
 
     const highlightsData = [
+        {
+        id: 2,
+        title: "Situs Download Game Nintendo Switch Bajakan Telah Disita oleh FBI?",
+        category: "game",
+        image: "https://i.postimg.cc/TPPc25ky/Situs-Download-Game-Nintendo-Switch-Bajakan-Telah-Disita-oleh-FBI-2-768x432.webp",
+        date: "12 Juli 2025",
+        link: "situs-download-nintendo-switch-bajakan-disita-fbi.html"
+      },
       {
         id: 1,
         title: "Ketika YouTube & TikTok Menjadi Sumber Berita Utama",
