@@ -1,5 +1,15 @@
 const articlesData = [
       {
+        id: 5,
+        title: "GTA 6 Bakal Gede Banget? Siap-siap Kosongkan Hard Drive?",
+        category: "game",
+        image: "https://i.postimg.cc/Zq71XVGR/images.jpg",
+        description: "Ukuran instalasi GTA 6 yang diprediksi sangat besar membuat para gamer mulai bersiap-siap mengosongkan hard drive mereka.",
+        date: "14 Juli 2025",
+        views: "9.2K",
+        link: "gta6-ukuran-game.html"
+      },
+      {
         id: 4,
         title: "Situs Download Game Nintendo Switch Bajakan Telah Disita oleh FBI?",
         category: "game",
